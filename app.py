@@ -12,10 +12,8 @@ times_array = []
 df = pd.read_csv('questions.csv', encoding='latin-1')
 # print(df.columns)
 
-questions_selected = df.sample(n=5)
-
-
 def set_array():
+    questions_selected = df.sample(n=5)
     for _, row in questions_selected.iterrows():
         question = row['Questions']
         bad_example = row['BadExample']
@@ -29,9 +27,6 @@ def set_array():
                                                 goodexample=good_example,
                                                 goodblurb=good_blurb))
 
-
-def clear_array(current_array):
-    current_array.clear()
 
 @app.route('/send_text', methods=['POST'])
 def receive_text():
@@ -49,14 +44,19 @@ def receive_text():
     else:
         return jsonify({"status": "error", "message": "Request must be JSON"}), 415
 
+
 @app.route('/clear_array', methods=['POST'])
-def reset_array():
-    clear_array(question_array)
-    clear_array(times_array)
-    clear_array(transcripts_array)
+def reset():
+    question_array.clear()
+    print("HELLO", question_array)
+    transcripts_array.clear()
+    times_array.clear()
     set_array()
+    print("HELLO", question_array)
+
     print("is this working")
     return question_array
+
 
 @app.route("/")
 def home():
