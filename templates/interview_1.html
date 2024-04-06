@@ -8,9 +8,11 @@
 <body>
 
 <div class = "entire-interview-div">
+
 <!--  where all the main stuff, cat animation, everything goes  -->
     <div class = "interview-main-div">
-          <img class = "hi" src = "/static/images/cat.png">
+        <script src = "/static/javascript/catTalkingAnimation.js"> </script>
+          <img class = "hi" src = "/static/images/cat.png" id="cat">
         {{question1}}
     </div>
 <!--  microphone  -->
@@ -23,7 +25,6 @@
 
 <!--    JAVASCRIPT FOR MICROPHONE    -->
         <script src = "/static/javascript/speechRecognition.js"></script>
-        <script src = "/static/javascript/catTalkingAnimation.js"> </script>
     </div>
 
 </div>
