@@ -3,17 +3,18 @@ from response import InterviewResponse
 from loading_file import read_file
 import pandas as pd
 
-
 app = Flask(__name__)
 finalTranscription = ''
 response_array = []
+
 
 df = pd.read_csv('questions.csv', encoding='latin-1')
 # print(df.columns)
 
 questions_selected = df.sample(n=5)
 
-for _, row in questions_selected.iterrows():
+def set_array():
+   for _, row in questions_selected.iterrows():
     question = row['Questions']
     bad_example = row['BadExample']
     bad_blurb = row['BadBlurb']
@@ -26,12 +27,10 @@ for _, row in questions_selected.iterrows():
                                             goodexample=good_example,
                                             goodblurb=good_blurb))
 
-
-def reset_array(current_array):
+def clear_array(current_array):
    current_array.clear()
-   print("Cleared array!")
-   return current_array
    
+
 @app.route('/send_text', methods=['POST'])
 def receive_text():
     if request.is_json:
@@ -44,12 +43,8 @@ def receive_text():
             # return jsonify({"status": "success", "message": "Text received successfully"}), 200
         else:
             return jsonify({"status": "error", "message": "No text provided"}), 400
-
-@app.route('/clear_array', methods=['POST'])
-def clear_array():
-    reset_array(response_array)
-    print("is this working")
-    return response_array
+    else:
+        return jsonify({"status": "error", "message": "Request must be JSON"}), 415
 
 @app.route("/")
 def home():
