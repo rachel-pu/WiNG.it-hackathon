@@ -78,7 +78,6 @@ def instructions():
     set_array()
     return render_template("instructions.html")
 
-
 @app.route("/interview1")
 def interview1():
     if len(question_array) > 0:
