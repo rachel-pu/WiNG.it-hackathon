@@ -34,17 +34,24 @@ class InterviewResponse:
         word_count = Counter(words)
         self.mostrepeatedwords = word_count.most_common(5) 
 
-    def print_badexample(self):
-        badexample = self.badexample
+    def set_response(self, text):
+        self.response = text
+
+    def get_badexample(self):
+        return self.badexample
     
-    def print_badexample(self):
+    def get_badblurb(self):
         badblurb = self.badblurb
 
-    def print_goodexample(self):
+    def get_goodexample(self):
         goodexample = self.goodexample
 
-    def print_goodblurb(self):
+    def get_goodblurb(self):
         goodblurb = self.goodblurb
+
+        
+
+    
 
 
     
