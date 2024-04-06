@@ -109,7 +109,8 @@ def interview5():
 
 @app.route("/results")
 def results():
-    return render_template("results.html")
+
+    return render_template("results.html", question_array=question_array, transcripts_array=transcripts_array, times_array=times_array)
 
 
 if __name__ == '__main__':
