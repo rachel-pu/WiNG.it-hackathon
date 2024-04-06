@@ -11,30 +11,31 @@ class InterviewResponse:
         self.responsetime = None                   # will be recorded with timer?
         self.mostrepeatedwords = None             # for each question?
         self.tone = None
-        self.badexample = None
-        self.badblurb = None
-        self.goodexample = None
-        self.goodblurb = None
+        self.badexample = badexample
+        self.badblurb = badblurb
+        self.goodexample = goodexample
+        self.goodblurb = goodblurb
 
-    def word_count(self):
-
-        words = self.response.split()
-        word_count = Counter(words)
-        self.mostrepeatedwords = word_count.most_common(5)        # for each question
-
-
-    def print_question(self):           # for printing question on website
-        question = self.question
-
-    def print_average_time(self, response_array):
+    def get_question(self):             # print question
+       return self.question
+    
+    def set_responsetime(self, time):           # set indiv reponse time
+        self.responsetime = time
+        
+    def get_time(self):                 # print indiv reponse time
+        return self.responsetime
+    
+    def get_average_time(self, response_array):             # print average time
         average_time = sum(self.responsetime for response in response_array) / 5
+        return average_time
 
-    def print_most_repeated(self):
+    def get_top_words(self):           # print top words
         words = self.response.split()
         word_count = Counter(words)
-        self.mostrepeatedwords = word_count.most_common(5) 
+        self.mostrepeatedwords = word_count.most_common(3)        # for each question
+        return self.mostrepeatedwords
 
-    def set_response(self, text):
+    def set_response(self, text):       # set response
         self.response = text
 
     def get_badexample(self):
@@ -49,8 +50,8 @@ class InterviewResponse:
     def get_goodblurb(self):
         return self.goodblurb
     
-    def get_question(self):
-        return self.question
+    
+
     
 
 

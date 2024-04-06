@@ -4,7 +4,7 @@ import pandas as pd
 
 def main():
     df = pd.read_csv('questions.csv', encoding='latin-1')
-    print(df)
+    # print(df.columns)
 
     questions_selected = df.sample(n=5)
 
@@ -23,13 +23,13 @@ def main():
                                                 goodexample=good_example,
                                                 goodblurb=good_blurb))
 
-    for i in response_array:
-        print("Question:", i.question)
-        print("Bad Example:", i.badexample)
-        print("Bad Blurb:", i.badblurb)
-        print("Good Example:", i.goodexample)
-        print("Good Blurb:", i.goodblurb)
-        print()
+    # for i in response_array:
+    #     print("Question:", i.question)
+    #     print("Bad Example:", i.badexample)
+    #     print("Bad Blurb:", i.badblurb)
+    #     print("Good Example:", i.goodexample)
+    #     print("Good Blurb:", i.goodblurb)
+    #     print()
 
     
 if __name__ == "__main__":
