@@ -9,7 +9,7 @@ body{
 }
 
 .interview-main-div{
-    height: 84vh;
+    height: 80vh;
 }
 
 .hi{
@@ -20,31 +20,62 @@ body{
 
 .microphone-div{
     display: flex;
-    flex-direction: row;
     background-color: grey;
-    height: 12%;
+    height: 16%;
+    justify-content: right; /* Centers content horizontally in the container */
     align-items: center;
 }
 
-.button {
-  display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  outline: none;
-  color: #fff;
-  background-color: #04AA6D;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
+.microphone-button-next-arrow-div{
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Centers content horizontally in the container */
+}
+
+button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
 }
 
 .button:hover {background-color: #3e8e41}
 
 .button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    justify-content: center; /* Centers content horizontally in the container */
+    align-items: center; /* Centers content vertically in the container */
+}
+
+.microphone-image{
+    width: 45px;
+    height: 45px;
+}
+
+.microphone-button-div{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center; /* Centers content horizontally in the container */
+    align-items: center; /* Centers content vertically in the container */
+    height: 12%; /* Ensure that the height is sufficient to contain the contents */
+}
+
+.interview-main-div p {
+    font-size: 24px;
+    font-family: 'satoshi-medium';
+    margin-left: 20px;
+    margin-right: 20px;
+
 }
