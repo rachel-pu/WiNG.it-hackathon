@@ -41,15 +41,19 @@ class InterviewResponse:
         return self.badexample
     
     def get_badblurb(self):
-        badblurb = self.badblurb
+        return self.badblurb
 
     def get_goodexample(self):
-        goodexample = self.goodexample
+        return self.goodexample
 
     def get_goodblurb(self):
-        goodblurb = self.goodblurb
+        return self.goodblurb
+    
+    def get_question(self):
+        return self.question
+    
 
-        
+
 
     
 
