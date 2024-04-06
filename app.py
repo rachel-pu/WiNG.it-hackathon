@@ -65,6 +65,7 @@ def home():
 
 @app.route("/instructions")
 def instructions():
+    set_array()
     return render_template("instructions.html")
 
 

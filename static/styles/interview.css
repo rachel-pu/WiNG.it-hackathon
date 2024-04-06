@@ -20,9 +20,9 @@ body{
 
 .microphone-div{
     display: flex;
-    flex-direction: row;
     background-color: grey;
-    height: 12%;
+    height: 14%;
+    justify-content: center; /* Centers content horizontally in the container */
     align-items: center;
 }
 
@@ -52,8 +52,8 @@ button {
 }
 
 .microphone-image{
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
 }
 
 .microphone-button-div{
@@ -62,7 +62,6 @@ button {
     margin: auto;
     justify-content: center; /* Centers content horizontally in the container */
     align-items: center; /* Centers content vertically in the container */
-    background-color: grey;
     height: 12%; /* Ensure that the height is sufficient to contain the contents */
 }
 

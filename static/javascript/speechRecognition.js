@@ -3,6 +3,7 @@
     const button = document.getElementById('microphone-button'); // const button is getting html button element
     const transcription = document.getElementById('transcription');
     let finalTranscript = '';
+    let speechTime = 0;
     let speechActive = false; // tracking if microphone is recording, defaulted to false
     let speech = new webkitSpeechRecognition() || new SpeechRecognition();
     speech.continuous = true; // will continue to listen to user
@@ -59,6 +60,6 @@
         timerInterval = setInterval(() => {
             totalSeconds++;
             console.log(totalSeconds);
-        }, 1000);      // 1000ms = 1s
+            }, 1000);      // 1000ms = 1s
     }
 
