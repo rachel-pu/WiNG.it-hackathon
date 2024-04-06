@@ -1,5 +1,20 @@
+@font-face {
+    font-family: 'eas-vhs';
+    src: url('../fonts/easvhs.ttf');
+}
+
+@font-face{
+    font-family: 'satoshi-medium';
+    src: url('../fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Medium.otf');
+}
+
+.instructionsHeading{
+    font-family: eas-vhs;
+
+}
+
 .instructionBullets{
-    text-align: center;
     background-color: #d27878;
+    font-family: satoshi-medium;
 
 }
