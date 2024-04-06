@@ -10,7 +10,7 @@
 <div class = "entire-interview-div">
 <!--  where all the main stuff, cat animation, everything goes  -->
     <div class = "interview-main-div">
-          <img class = "hi" src = "/static/images/testKitty.png">
+          <img class = "hi" src = "/images/cat.png">
         {{question5}}
     </div>
 <!--  microphone  -->
@@ -24,5 +24,21 @@
     </div>
 
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const cat = document.getElementById('cat');
+    let isOpen = false;
+
+    setInterval(function () {
+        isOpen = !isOpen;
+        if (isOpen) {
+            cat.src = "static/images/cat_open.png";
+        } else {
+            cat.src = "static/images/cat.png";
+        }
+    }, 100); // Adjust timing as needed
+});
+
+</script>
 </body>
 </html>
