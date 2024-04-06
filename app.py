@@ -6,8 +6,8 @@ import pandas as pd
 app = Flask(__name__)
 finalTranscription = ''
 question_array = []
-response_transcipts = []
-response_times = []
+transcripts_array = []
+times_array = []
 
 df = pd.read_csv('questions.csv', encoding='latin-1')
 # print(df.columns)
@@ -41,7 +41,7 @@ def receive_text():
         if finalTranscription:
             print("Received text:", finalTranscription)  # Optional: log to console or process text as needed
             # setResponse(finalTranscription)
-            question_array[0].set_response(finalTranscription)
+            transcripts_array.append(finalTranscription)
             return finalTranscription
             # return jsonify({"status": "success", "message": "Text received successfully"}), 200
         else:
@@ -52,8 +52,8 @@ def receive_text():
 @app.route('/clear_array', methods=['POST'])
 def reset_array():
     clear_array(question_array)
-    clear_array(response_times)
-    clear_array(response_transcipts)
+    clear_array(times_array)
+    clear_array(transcripts_array)
     set_array()
     print("is this working")
     return question_array
