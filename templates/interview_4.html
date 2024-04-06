@@ -10,21 +10,41 @@
 <div class = "entire-interview-div">
 <!--  where all the main stuff, cat animation, everything goes  -->
     <div class = "interview-main-div">
-          <img class = "hi" src = "/static/images/testKitty.png">
-        <p>{{question4}}</p>
+          <img class = "hi" src = "/images/cat.png">
+        {{question4}}
     </div>
 <!--  microphone  -->
-    <div class = "microphone-div">
-        <div class = "microphone-button-next-arrow-div">
-            <button id="microphone-button"><img class = "microphone-image" src = "/static/images/microphone.png"></button>
-<!--            <p id="transcription">Press the button and start speaking...</p>-->
-            <a href = "/interview5"><button>go to page 5</button></a>
-        </div>
+    <div class = "microphone">
+        <button id="microphone-button">Start Recording</button>
+        <p id="transcription">Press the button and start speaking...</p>
+        <a href = "/interview5"><button>go to page 5</button></a>
 
 <!--    JAVASCRIPT FOR MICROPHONE    -->
         <script src = "/static/javascript/speechRecognition.js"></script>
     </div>
 
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const cat = document.getElementById('cat');
+    let isOpen = false;
+    let timer = setTimeout(stopAnimation, 6000); // Stop animation after 10 seconds
+
+    function stopAnimation() {
+        clearInterval(interval);
+        clearTimeout(timer);
+    }
+
+    const interval = setInterval(function () {
+        isOpen = !isOpen;
+        if (isOpen) {
+            cat.src = "static/images/cat.png";
+        } else {
+            cat.src = "static/images/cat_open.png";
+        }
+    }, 100); // Adjust timing as needed
+});
+
+</script>
 </body>
 </html>
