@@ -57,7 +57,13 @@ body{
     padding: 15px;
     font-family: 'satoshi-medium';
     border-radius: 10px;
+    cursor: pointer;
+    background-color: white;
+}
 
+.home-main-div a{
+    width: 50%;
+    background-color: red;
 }
 
 .project-creators{
