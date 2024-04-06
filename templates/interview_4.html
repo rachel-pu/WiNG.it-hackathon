@@ -11,6 +11,7 @@
 <!--  where all the main stuff, cat animation, everything goes  -->
     <div class = "interview-main-div">
           <img class = "hi" src = "/static/images/testKitty.png">
+        {{question4}}
     </div>
 <!--  microphone  -->
     <div class = "microphone">
@@ -22,6 +23,7 @@
         <script>
             const button = document.getElementById('microphone-button'); // const button is getting html button element
             const transcription = document.getElementById('transcription');
+            let responseTime = 0;
             let finalTranscript = '';
             let speechActive = false; // tracking if microphone is recording, defaulted to false
             let speech = new webkitSpeechRecognition() || new SpeechRecognition();
@@ -59,6 +61,7 @@
             button.onclick = () => {
                 if (speechActive) {
                     speech.stop();
+                    responseTime = end - start;
                     button.textContent = 'Start Recording';
                 } else {
                     speech.start();

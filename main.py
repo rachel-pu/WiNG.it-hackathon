@@ -2,13 +2,12 @@ from response import InterviewResponse
 from loading_file import read_file
 import pandas as pd
 
+response_array = []
 def main():
     df = pd.read_csv('questions.csv', encoding='latin-1')
     # print(df.columns)
 
     questions_selected = df.sample(n=5)
-
-    response_array = []
 
     for _, row in questions_selected.iterrows():
         question = row['Questions']
@@ -31,7 +30,9 @@ def main():
     #     print("Good Blurb:", i.goodblurb)
     #     print()
 
+def get_response_array():
+    return response_array
     
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
