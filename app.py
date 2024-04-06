@@ -27,9 +27,9 @@ def set_array():
                                             goodexample=good_example,
                                             goodblurb=good_blurb))
 
-def clear_array(current_array):
-   current_array.clear()
-   
+def clear_array():
+   response_array.clear()
+   print("cleared!")
 
 @app.route('/send_text', methods=['POST'])
 def receive_text():
@@ -38,7 +38,7 @@ def receive_text():
         finalTranscription = data.get('text', '')  # Extract text field from JSON data or default to empty string
         if finalTranscription:
             print("Received text:", finalTranscription)  # Optional: log to console or process text as needed
-            # setResponse(finalTranscription)
+            set_response(finalTranscription)
             return finalTranscription
             # return jsonify({"status": "success", "message": "Text received successfully"}), 200
         else:
@@ -46,12 +46,21 @@ def receive_text():
     else:
         return jsonify({"status": "error", "message": "Request must be JSON"}), 415
 
+
+@app.route('/clear_array', methods=['POST'])
+def reset_array():
+    clear_array()
+    set_array()
+    print("is this working")
+    return response_array
+
 @app.route("/")
 def home():
     return render_template("home.html")
 
 @app.route("/instructions")
 def instructions():
+    set_array()
     return render_template("instructions.html")
 
 @app.route("/interview1")

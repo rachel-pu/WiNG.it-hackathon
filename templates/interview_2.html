@@ -11,12 +11,14 @@
 <!--  where all the main stuff, cat animation, everything goes  -->
     <div class = "interview-main-div">
           <img class = "hi" src = "/static/images/testKitty.png">
-        {{question2}}
+        <p>{{question2}}</p>
     </div>
 <!--  microphone  -->
-    <div class = "microphone">
-        <button id="microphone-button">Start Recording</button>
-        <p id="transcription">Press the button and start speaking...</p>
+    <div class = "microphone-div">
+        <div class = "microphone-button-div">
+            <button id="microphone-button"><img class = "microphone-image" src = "/static/images/microphone.png"></button>
+            <p id="transcription">Press the button and start speaking...</p>
+        </div>
         <a href = "/interview3"><button>go to page 3</button></a>
 
 <!--    JAVASCRIPT FOR MICROPHONE    -->

@@ -26,7 +26,7 @@ body{
     align-items: center;
 }
 
-.button {
+button {
   display: inline-block;
   padding: 15px 25px;
   font-size: 24px;
@@ -47,4 +47,29 @@ body{
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+    justify-content: center; /* Centers content horizontally in the container */
+    align-items: center; /* Centers content vertically in the container */
+}
+
+.microphone-image{
+    width: 60px;
+    height: 60px;
+}
+
+.microphone-button-div{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center; /* Centers content horizontally in the container */
+    align-items: center; /* Centers content vertically in the container */
+    background-color: grey;
+    height: 12%; /* Ensure that the height is sufficient to contain the contents */
+}
+
+.interview-main-div p{
+    font-size: 24px;
+    font-family: 'satoshi-medium';
+    margin-left: 20px;
+    margin-right: 20px;
+
 }
