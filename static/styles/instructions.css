@@ -8,13 +8,27 @@
     src: url('../fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Medium.otf');
 }
 
+.instructionsMainDiv{
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: #d27878;
+
+
+}
+
 .instructionsHeading{
+    font-size: 30px;
+    letter-spacing: 3px;
     font-family: eas-vhs;
 
 }
 
 .instructionBullets{
-    background-color: #d27878;
+    font-size: 20px;
     font-family: satoshi-medium;
 
+}
+
+.okayButton{
+    justify-content: center;
 }
