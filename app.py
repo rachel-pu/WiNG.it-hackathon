@@ -1,15 +1,22 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
+finalTranscription = ''
+
+# app.config["SECRET_KEY"] = "your_secret_key"  # Needed for session management
+# app.config["SESSION_PERMANENT"] = False
+# app.config["SESSION_TYPE"] = "filesystem"
 
 @app.route('/send_text', methods=['POST'])
 def receive_text():
     if request.is_json:
         data = request.get_json()  # Get data sent as JSON
-        text = data.get('text', '')  # Extract text field from JSON data or default to empty string
-        if text:
-            print("Received text:", text)  # Optional: log to console or process text as needed
-            return jsonify({"status": "success", "message": "Text received successfully"}), 200
+        finalTranscription = data.get('text', '')  # Extract text field from JSON data or default to empty string
+        if finalTranscription:
+            print("Received text:", finalTranscription)  # Optional: log to console or process text as needed
+
+            return finalTranscription
+            # return jsonify({"status": "success", "message": "Text received successfully"}), 200
         else:
             return jsonify({"status": "error", "message": "No text provided"}), 400
     else:
