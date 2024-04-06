@@ -27,8 +27,10 @@ for _, row in questions_selected.iterrows():
                                             goodblurb=good_blurb))
 
 
-def clear_array(current_array):
+def reset_array(current_array):
    current_array.clear()
+   print("Cleared array!")
+   return current_array
    
 @app.route('/send_text', methods=['POST'])
 def receive_text():
@@ -42,8 +44,12 @@ def receive_text():
             # return jsonify({"status": "success", "message": "Text received successfully"}), 200
         else:
             return jsonify({"status": "error", "message": "No text provided"}), 400
-    else:
-        return jsonify({"status": "error", "message": "Request must be JSON"}), 415
+
+@app.route('/clear_array', methods=['POST'])
+def clear_array():
+    reset_array(response_array)
+    print("is this working")
+    return response_array
 
 @app.route("/")
 def home():
