@@ -1,0 +1,25 @@
+body{
+    background-color: #e7cbb3;
+}
+
+.entire-interview-div{
+    background-color: white;
+    margin: 20px;
+    height: 95vh;
+}
+
+.interview-main-div{
+    height: 84vh;
+}
+
+.hi{
+    width: 100%; /* Make the image take up 100% of the div's width */
+    height: 100%; /* Make the image take up 100% of the div's height */
+    object-fit: cover;
+}
+
+.microphone{
+    background-color: grey;
+    height: 12%;
+    align-items: center;
+}
