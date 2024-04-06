@@ -26,13 +26,15 @@
 
     speech.onend = function() {
         if (finalTranscript !== '') {
-            // Send the complete transcription when the speech recognition stops
+            // Prepare form data
+            let formData = new FormData();
+            formData.append('text', finalTranscript);
+            formData.append('time', speechTime.toString()); // Convert time to string if necessary
+
+            // Send the complete transcription and the speech time when the speech recognition stops
             fetch('/send_text', {
                 method: 'POST',
-//                headers: {
-//                    'Content-Type': 'application/json',
-//                },
-                body: JSON.stringify({text: finalTranscript})
+                body: formData  // Sending as FormData object
             })
                 .then(response => response.json())
                 .then(data => console.log(data))
@@ -44,6 +46,7 @@
         if (speechActive) {
             clearInterval(timerInterval);       // clear the timer when stop recording
             speech.stop();
+            speechTime = totalSeconds;
             button.innerHTML = '<img class = "microphone-image" src="/static/images/microphone.png" alt="microphone image">';
 
         } 

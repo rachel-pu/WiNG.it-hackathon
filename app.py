@@ -5,6 +5,8 @@ import pandas as pd
 
 app = Flask(__name__)
 finalTranscription = ''
+finalTime = 0
+
 question_array = []
 transcripts_array = []
 times_array = []
@@ -37,34 +39,16 @@ def set_array():
 
 @app.route('/send_text', methods=['POST'])
 def receive_text():
-    if request.is_json:
-        data = request.get_json()  # Get data sent as JSON
-        finalTranscription = data.get('text', '')  # Extract text field from JSON data or default to empty string
-        if finalTranscription:
-            print("Received text:", finalTranscription)  # Optional: log to console or process text as needed
-            # setResponse(finalTranscription)
-            transcripts_array.append(finalTranscription)
-            return finalTranscription
-            # return jsonify({"status": "success", "message": "Text received successfully"}), 200
-        else:
-            return jsonify({"status": "error", "message": "No text provided"}), 400
-    else:
-        return jsonify({"status": "error", "message": "Request must be JSON"}), 415
+    finalTranscription = request.form['text']  # Retrieve text from form data
+    finalTime = request.form['time']  # Retrieve time from form data
+    print("Received transcription:", finalTranscription)
+    print("Speech duration:", finalTime, "seconds")
+    transcripts_array.append(finalTranscription)
+    times_array.append(finalTime)
+
+    return jsonify({"status": "success", "message": "Data received"})
 
 
-@app.route('/clear_array', methods=['POST'])
-def reset():
-    print("hello!!!")
-    return jsonify("Array cleared")
-  
-    # print("HELLO", question_array)
-    # transcripts_array.clear()
-    # times_array.clear()
-    # set_array()
-    # print("HELLO", question_array)
-    #
-    # print("is this working")
-    # return question_array
 
 
 @app.route("/")
