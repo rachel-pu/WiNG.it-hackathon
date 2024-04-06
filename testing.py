@@ -1,10 +1,9 @@
 import speech_recognition as sr
 
-r= sr.Recognizer()
+r = sr.Recognizer()
 
 
 while True:
-    # try:
     with sr.Microphone() as source:
         r.adjust_for_ambient_noise(source,duration=2)
         print("say something")
@@ -13,8 +12,3 @@ while True:
         text = text.lower()
 
         print(f"recognized text: {text}")
-
-    # except:
-    #     print("you were trying to be funny")
-    #     r = sr.Recognizer()
-    #     continue
