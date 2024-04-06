@@ -35,16 +35,16 @@ def interview1():
     return render_template("interview_1.html")
 
 @app.route("/interview2")
-def interview():
+def interview2():
     return render_template("interview_2.html")
 @app.route("/interview3")
-def interview():
+def interview3():
     return render_template("interview_3.html")
 @app.route("/interview4")
-def interview():
+def interview4():
     return render_template("interview_4.html")
 @app.route("/interview5")
-def interview():
+def interview5():
     return render_template("interview_5.html")
 
 if __name__ == '__main__':
