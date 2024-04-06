@@ -27,6 +27,9 @@ for _, row in questions_selected.iterrows():
                                             goodblurb=good_blurb))
 
 
+def clear_array(current_array):
+   current_array.clear()
+   
 @app.route('/send_text', methods=['POST'])
 def receive_text():
     if request.is_json:
