@@ -10,7 +10,6 @@ body{
 
 .interview-main-div{
     height: 84vh;
-        position: relative;
 }
 
 .hi{
@@ -48,33 +47,4 @@ body{
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
-}
-
-
-/* cat talking */
-/*.cat-container {*/
-/*    position: relative;*/
-/*}*/
-
-#cat {
-    position: absolute;
-    top: 0;
-    left: 0;
-    animation: talking 1s ease-in alternate; /* Adjust animation duration as needed */
-}
-
-@keyframes talking {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-#cat.closed {
-    display: none;
 }
