@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'eas-vhs';
+    src: url('../fonts/easvhs.ttf');
+}
+
+@font-face{
+    font-family: 'satoshi-medium';
+    src: url('../fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Medium.otf');
+}
+
+body{
+    background-color: #fff3e5;
+}
+
+.container {
+    display: flex;
+    column-gap: 3%;
+}
+
+.questions-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    /*background-color: #d27878;*/
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    float: left;
+    font-family: 'satoshi-medium';
+}
+
+.stats-btn {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-color: aqua;
+    width: 80%;
+    align-content: center;
+    border-radius: 10px;
+    font-family: 'satoshi-medium';
+
+
+}
+
+.question-btn {
+
+}
+
+.results-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-color: #d27878;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    float: right;
+    font-family: 'satoshi-medium';
+}

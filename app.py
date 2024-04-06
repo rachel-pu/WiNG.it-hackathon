@@ -34,5 +34,9 @@ def instructions():
 def interview():
     return render_template("interview.html")
 
+@app.route("/results")
+def results():
+    return render_template("results.html")
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
