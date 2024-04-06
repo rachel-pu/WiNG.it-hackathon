@@ -1,0 +1,21 @@
+body{
+    background-color: #fff3e5;
+}
+
+.home-main-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    background-color: #d27878;
+    width: 75%;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.description{
+    width: 75%;
+    margin: auto;
+    background-color: red;
+}
