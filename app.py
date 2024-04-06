@@ -65,6 +65,7 @@ def interview2():
     else:
         question2 = "No question available"
     return render_template("interview_2.html", question2=question2)
+
 @app.route("/interview3")
 def interview3():
     if len(response_array) > 0:
@@ -72,6 +73,7 @@ def interview3():
     else:
         question3 = "No question available"
     return render_template("interview_3.html", question3=question3)
+
 @app.route("/interview4")
 def interview4():
     if len(response_array) > 0:
@@ -79,6 +81,7 @@ def interview4():
     else:
         question4 = "No question available"
     return render_template("interview_4.html", question4=question4)
+
 @app.route("/interview5")
 def interview5():
     if len(response_array) > 0:
