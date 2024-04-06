@@ -14,7 +14,7 @@ def receive_text():
         finalTranscription = data.get('text', '')  # Extract text field from JSON data or default to empty string
         if finalTranscription:
             print("Received text:", finalTranscription)  # Optional: log to console or process text as needed
-
+            setResponse(finalTranscription)
             return finalTranscription
             # return jsonify({"status": "success", "message": "Text received successfully"}), 200
         else:
@@ -30,9 +30,22 @@ def home():
 def instructions():
     return render_template("instructions.html")
 
-@app.route("/interview")
+@app.route("/interview1")
+def interview1():
+    return render_template("interview_1.html")
+
+@app.route("/interview2")
 def interview():
-    return render_template("interview.html")
+    return render_template("interview_2.html")
+@app.route("/interview3")
+def interview():
+    return render_template("interview_3.html")
+@app.route("/interview4")
+def interview():
+    return render_template("interview_4.html")
+@app.route("/interview5")
+def interview():
+    return render_template("interview_5.html")
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
