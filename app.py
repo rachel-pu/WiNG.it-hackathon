@@ -5,8 +5,9 @@ import pandas as pd
 
 app = Flask(__name__)
 finalTranscription = ''
-response_array = []
-
+question_array = []
+response_transcipts = []
+response_times = []
 
 df = pd.read_csv('questions.csv', encoding='latin-1')
 # print(df.columns)
@@ -21,7 +22,7 @@ def set_array():
     good_example = row['GoodExample']
     good_blurb = row['GoodBlurb']
 
-    response_array.append(InterviewResponse(question,
+    question_array.append(InterviewResponse(question,
                                             badexample=bad_example,
                                             badblurb=bad_blurb,
                                             goodexample=good_example,
@@ -39,6 +40,7 @@ def receive_text():
         if finalTranscription:
             print("Received text:", finalTranscription)  # Optional: log to console or process text as needed
             # setResponse(finalTranscription)
+            question_array[0].set_response(finalTranscription)
             return finalTranscription
             # return jsonify({"status": "success", "message": "Text received successfully"}), 200
         else:
@@ -56,40 +58,40 @@ def instructions():
 
 @app.route("/interview1")
 def interview1():
-    if len(response_array) > 0:
-     question1 = response_array[0].question
+    if len(question_array) > 0:
+     question1 = question_array[0].question
     else:
         question1 = "No question available"
     return render_template("interview_1.html", question1=question1)
 
 @app.route("/interview2")
 def interview2():
-    if len(response_array) > 0:
-     question2 = response_array[1].question
+    if len(question_array) > 0:
+     question2 = question_array[1].question
     else:
         question2 = "No question available"
     return render_template("interview_2.html", question2=question2)
 
 @app.route("/interview3")
 def interview3():
-    if len(response_array) > 0:
-     question3 = response_array[2].question
+    if len(question_array) > 0:
+     question3 = question_array[2].question
     else:
         question3 = "No question available"
     return render_template("interview_3.html", question3=question3)
 
 @app.route("/interview4")
 def interview4():
-    if len(response_array) > 0:
-     question4 = response_array[3].question
+    if len(question_array) > 0:
+     question4 = question_array[3].question
     else:
         question4 = "No question available"
     return render_template("interview_4.html", question4=question4)
 
 @app.route("/interview5")
 def interview5():
-    if len(response_array) > 0:
-     question5 = response_array[4].question
+    if len(question_array) > 0:
+     question5 = question_array[4].question
     else:
         question5 = "No question available"
     return render_template("interview_5.html", question5=question5)

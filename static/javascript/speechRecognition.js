@@ -9,6 +9,9 @@
     speech.interimResults = false;
     speech.lang = 'en-US';
 
+    let timerInterval; // store interval timer
+    let totalSeconds = 0; // store total seconds
+
     speech.onresult = function(event) {
         for (let i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
@@ -38,11 +41,24 @@
 
     button.onclick = () => {
         if (speechActive) {
+            clearInterval(timerInterval);       // clear the timer when stop recording
             speech.stop();
             button.textContent = 'Start Recording';
-        } else {
+        } 
+        
+        else {
+            startTimer();       // start the timer when start recording
             speech.start();
             button.textContent = 'Stop Recording';
         }
         speechActive = !speechActive;
     };
+
+    function startTimer() {     // start timer
+        totalSeconds = 0;
+        timerInterval = setInterval(() => {
+            totalSeconds++;
+            console.log(totalSeconds);
+        }, 1000);      // 1000ms = 1s
+    }
+
