@@ -12,6 +12,13 @@ times_array = []
 df = pd.read_csv('questions.csv', encoding='latin-1')
 # print(df.columns)
 
+def clear_array():
+    if len(question_array) > 0:
+        question_array.clear()
+        transcripts_array.clear()
+        times_array.clear()
+
+
 def set_array():
     questions_selected = df.sample(n=5)
     for _, row in questions_selected.iterrows():
@@ -47,15 +54,17 @@ def receive_text():
 
 @app.route('/clear_array', methods=['POST'])
 def reset():
-    question_array.clear()
-    print("HELLO", question_array)
-    transcripts_array.clear()
-    times_array.clear()
-    set_array()
-    print("HELLO", question_array)
-
-    print("is this working")
-    return question_array
+    print("hello!!!")
+    return jsonify("Array cleared")
+  
+    # print("HELLO", question_array)
+    # transcripts_array.clear()
+    # times_array.clear()
+    # set_array()
+    # print("HELLO", question_array)
+    #
+    # print("is this working")
+    # return question_array
 
 
 @app.route("/")
@@ -65,6 +74,7 @@ def home():
 
 @app.route("/instructions")
 def instructions():
+    clear_array()
     set_array()
     return render_template("instructions.html")
 

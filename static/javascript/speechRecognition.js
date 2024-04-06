@@ -44,7 +44,8 @@
         if (speechActive) {
             clearInterval(timerInterval);       // clear the timer when stop recording
             speech.stop();
-            button.textContent = 'Start Recording';
+            button.innerHTML = '<img class = "microphone-image" src="/static/images/microphone.png" alt="microphone image">';
+
         } 
         
         else {

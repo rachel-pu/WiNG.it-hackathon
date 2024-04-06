@@ -26,9 +26,15 @@
 
         </div>
         <div class="reset-div">
-            <h1>Reset</h1>
             <button id="reset-button">Reset</button>
         </div>
+
+        <script>
+            document.getElementById("reset-button").addEventListener("click", function() {
+                // Redirect to instructions.html when the reset button is clicked
+                window.location.href = "instructions";
+            });
+        </script>
 
 
     </div>
