@@ -18,7 +18,9 @@ body{
     object-fit: cover;
 }
 
-.microphone{
+.microphone-div{
+    display: flex;
+    flex-direction: row;
     background-color: grey;
     height: 12%;
     align-items: center;
