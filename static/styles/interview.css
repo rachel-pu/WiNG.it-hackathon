@@ -44,7 +44,7 @@ button {
     outline: none;
     color: #fff;
     background-color: #04AA6D;
-    border: none;
+    border: blue;
     border-radius: 15px;
     box-shadow: 0 9px #999;
 }
@@ -81,25 +81,6 @@ button {
 
 }
 
-#cat {
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    animation: talking 6s ease-in alternate; /* Adjust animation duration as needed */
-}
-
-@keyframes talking {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-#cat.closed {
-    display: none;
+#freeze-image {
+    display: none; /* Initially hide the freeze image */
 }

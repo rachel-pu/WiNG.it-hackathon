@@ -2,6 +2,9 @@ from flask import Flask, render_template, request, jsonify
 from response import InterviewResponse
 from loading_file import read_file
 import pandas as pd
+import playsound
+from gtts import gTTS
+
 
 app = Flask(__name__)
 finalTranscription = ''
@@ -13,6 +16,13 @@ times_array = []
 
 df = pd.read_csv('questions.csv', encoding='latin-1')
 # print(df.columns)
+
+# def play_audio(text):
+#     tts = gTTS(text)
+#     tts.save("audio.mp3")
+#     playsound.playsound("audio.mp3")
+
+
 
 def clear_array():
     if len(question_array) > 0:
@@ -61,6 +71,11 @@ def instructions():
     clear_array()
     set_array()
     return render_template("instructions.html")
+
+# @app.route('speak', methods=['POST'])
+# def speak():
+#
+
 
 @app.route("/interview1")
 def interview1():
@@ -115,3 +130,5 @@ def results():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
+
+#     app.run(debug=True)
