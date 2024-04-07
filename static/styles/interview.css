@@ -49,7 +49,8 @@ button {
     box-shadow: 0 9px #999;
 }
 
-.button:hover {background-color: #3e8e41}
+.button:hover {background-color: #1f4121
+}
 
 .button:active {
     background-color: #3e8e41;

@@ -1,14 +1,26 @@
-let voices, utterance;
-    function speakQuestion(question) {
-  // Check if speech synthesis is supported by the browser
-  if ('speechSynthesis' in window) {
-    // Create a new instance of SpeechSynthesisUtterance
-    utterance = new SpeechSynthesisUtterance(question);
+var voices, utterance;
+function speakQuestion(question) {
+  // stop any speaking in progress
+  window.speechSynthesis.cancel();
 
-    // Speak the question
-    speechSynthesis.speak(utterance);
-  } else {
-    // If speech synthesis is not supported, alert the user
-    alert('Sorry, speech synthesis is not supported by your browser.');
-  }
+  // Wait for the voices to be loaded
+  window.speechSynthesis.onvoiceschanged = function() {
+    // Get the voices
+    voices = window.speechSynthesis.getVoices();
+
+    // Find the Google UK English Male voice
+    var googleUKMaleVoice = voices.find(function(voice) {
+      return voice.name === 'Google UK English Male';
+    });
+
+      // create new utterance with all the properties
+      utterance = new SpeechSynthesisUtterance(question);
+
+      // Set the voice
+      utterance.voice = googleUKMaleVoice;
+
+      // speak that utterance
+      window.speechSynthesis.speak(utterance);
+
+  };
 }
