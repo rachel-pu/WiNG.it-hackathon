@@ -1,7 +1,7 @@
 
     // variables
     const button = document.getElementById('microphone-button'); // const button is getting html button element
-    const transcription = document.getElementById('transcription');
+    // const transcription = document.getElementById('transcription');
     let finalTranscript = '';
     let speechTime = 0;
     let speechActive = false; // tracking if microphone is recording, defaulted to false
@@ -21,7 +21,7 @@
                 interimTranscript += event.results[i][0].transcript;
             }
         }
-        transcription.textContent = finalTranscript; // Update the page with the transcription
+        // transcription.textContent = finalTranscript; // Update the page with the transcription
     };
 
     speech.onend = function() {
@@ -36,7 +36,6 @@
                 method: 'POST',
                 body: formData  // Sending as FormData object
             })
-                .then(response => response.json())
                 .then(data => console.log(data))
                 .catch(error => console.error('Error:', error));
         }
@@ -48,7 +47,6 @@
             speech.stop();
             speechTime = totalSeconds;
             button.innerHTML = '<img class = "microphone-image" src="/static/images/microphone.png" alt="microphone image">';
-
         } 
         
         else {

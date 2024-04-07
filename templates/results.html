@@ -4,25 +4,37 @@
     <link rel="stylesheet" href="\static\styles\results.css">
     <meta charset="UTF-8">
     <title>Overall Stats</title>
+
 </head>
 <body>
-<div class="container">
+    <div class = "header-div">
+        <h1>Here's how you did!</h1>
+    </div>
+    <div class="container">
     <div class="questions-div">
 
         <h1>Your Questions</h1>
-        <!--        <button class = "stats-btn">Overall Stats</button>-->
-        <button class="question-btn">{{question_array[0].question}}</button>
-        <button class="question-btn">{{question_array[1].question}}</button>
-        <button class="question-btn">{{question_array[2].question}}</button>
-        <button class="question-btn">{{question_array[3].question}}</button>
-        <button class="question-btn">{{question_array[4].question}}</button>
+        <button class="question-btn" id = "question1btn">{{question_array[0].question}}</button>
+        <button class="question-btn" id = "question2btn">{{question_array[1].question}}</button>
+        <button class="question-btn" id = "question3btn">{{question_array[2].question}}</button>
+        <button class="question-btn" id = "question4btn">{{question_array[3].question}}</button>
+        <button class="question-btn" id = "question5btn">{{question_array[4].question}}</button>
     </div>
 
     <div class="stats-div">
         <div class="results-div">
-            <h1>Overall Stats</h1>
-            <p> <span>0%</span></p>
-
+            <div id="question1stats" class="hidden">
+                <h2>Question 1</h2>
+                <p>{{question_array[0].question}}</p>
+                <p>Your Answer: <br/>{{transcripts_array[0]}}</p>
+                <p>Time you took for entire answer: {{times_array[0]}}</p>
+                <p>Correct: {{question_array[0].correct}}</p>
+                <p>Incorrect: {{question_array[0].incorrect}}</p>
+            </div>
+            <div id="question2stats" class="hidden">hello hello</div>
+            <div id="question3stats" class="hidden">hello hello</div>
+            <div id="question4stats" class="hidden">hello hello</div>
+            <div id="question5stats" class="hidden">hello hello</div>
 
         </div>
         <div class="reset-div">
@@ -30,9 +42,30 @@
         </div>
 
         <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var buttons = document.querySelectorAll(".question-btn"); // taking all the buttons in the question-btn class
+                var stats = document.querySelectorAll(".results-div > div"); // taking all the divs in the results-div class
+
+                // for each button, add an event listener
+                buttons.forEach((button, index) => {
+                    button.addEventListener("click", function() {
+                        stats.forEach((stat, idx) => {
+                            if (index === idx) {
+                                stat.classList.toggle("hidden");
+                                button.classList.toggle("pressed");
+                            } else {
+                                stat.classList.add("hidden");
+                                buttons[idx].classList.remove("pressed");
+                            }
+                        });
+                    });
+                });
+                });
+        </script>
+
+        <script>
             document.getElementById("reset-button").addEventListener("click", function() {
-                // Redirect to instructions.html when the reset button is clicked
-                window.location.href = "instructions";
+            window.location.href = "instructions";
             });
         </script>
 
