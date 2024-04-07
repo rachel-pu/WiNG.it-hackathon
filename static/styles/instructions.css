@@ -103,12 +103,13 @@ body{
     width: 100%;
 }
 
-.okayButton:hover {background-color: #1f4121
+.okayButton:hover {
+    background-color: #7fb2b4
 }
 
 .okayButton:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
+    background-color: #7fb2b4;
+    box-shadow: 0 5px #1d3557;
     transform: translateY(4px);
     justify-content: center; /* Centers content horizontally in the container */
     align-items: center; /* Centers content vertically in the container */

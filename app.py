@@ -16,12 +16,6 @@ seconds_array = []
 
 df = pd.read_csv('questions.csv', encoding='latin-1')
 
-def get_top_words(answer):           
-    words = answer.split()
-    wordcount = Counter(words)        
-    mostrepeatedwords = wordcount.most_common(3)        
-    return mostrepeatedwords
-
 def clear_array():
     if len(question_array) > 0:
         question_array.clear()
@@ -60,6 +54,8 @@ def receive_text():
         seconds = int(time) % 60
         minutes_array.append(minutes)
         seconds_array.append(seconds)
+    get_top_words(finalTranscription)
+
 
     return jsonify({"status": "success", "message": "Data received"})
 

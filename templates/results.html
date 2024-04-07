@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class = "header-div">
-        <h1>Here's how you did!</h1>
+        <h1>Interview Overview</h1>
     </div>
     <div class="container">
     <div class="questions-div">
@@ -23,32 +23,116 @@
 
     <div class="stats-div">
         <div class="results-div">
+            <p id = "instructions-p">To begin, please press one of your questions on the left!</p>
             <div id="question1stats" class="hidden">
                 <h2>Question 1</h2>
-                <p>{{question_array[0].question}}</p>
-                <p>Your Answer: <br/>{{transcripts_array[0]}}</p>
+                <button>Completed Response</button>
                 <p>Time you took for entire answer: {{minutes_array[0]}} minutes, {{seconds_array[0]}} seconds</p>
-                <p>Correct: {{question_array[0].correct}}</p>
-                <p>Incorrect: {{question_array[0].incorrect}}</p>
+                <div class = "advice-for-questions">
+                    <div class = "bad">
+                        <h3>What to avoid saying for this question</h3>
+                        <p>{{question_array[0].badblurb}}</p>
+                        <p>"{{question_array[0].badexample}}"</p>
+                    </div>
+                    <div class = "good">
+                        <h3>Tips to answer for this question</h3>
+                        <p>{{question_array[0].goodblurb}}</p>
+                        <p>"{{question_array[0].goodexample}}"</p>
+                    </div>
+                </div>
             </div>
-            <div id="question2stats" class="hidden">hello hello</div>
-            <div id="question3stats" class="hidden">hello hello</div>
-            <div id="question4stats" class="hidden">hello hello</div>
-            <div id="question5stats" class="hidden">hello hello</div>
+
+            <div id="question2stats" class="hidden">
+                <h2>Question 2</h2>
+                <button>Completed Response</button>
+                <p>Time you took for entire answer: {{minutes_array[1]}} minutes, {{seconds_array[1]}} seconds</p>
+                <div class = "advice-for-questions">
+                    <div class = "bad">
+                        <h3>What to avoid saying for this question</h3>
+                        <p>{{question_array[1].badblurb}}</p>
+                        <p>"{{question_array[1].badexample}}"</p>
+                    </div>
+                    <div class = "good">
+                        <h3>Tips to answer for this question</h3>
+                        <p>{{question_array[1].goodblurb}}</p>
+                        <p>"{{question_array[1].goodexample}}"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="question3stats" class="hidden">
+                <h2>Question 3</h2>
+                <button>Completed Response</button>
+                <p>Time you took for entire answer: {{minutes_array[2]}} minutes, {{seconds_array[2]}} seconds</p>
+                <div class = "advice-for-questions">
+                    <div class = "bad">
+                        <h3>What to avoid saying for this question</h3>
+                        <p>{{question_array[2].badblurb}}</p>
+                        <p>"{{question_array[2].badexample}}"</p>
+                    </div>
+                    <div class = "good">
+                        <h3>Tips to answer for this question</h3>
+                        <p>{{question_array[2].goodblurb}}</p>
+                        <p>"{{question_array[2].goodexample}}"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="question4stats" class="hidden">
+                <h2>Question 4</h2>
+                <button>Completed Response</button>
+                <p>Time you took for entire answer: {{minutes_array[3]}} minutes, {{seconds_array[3]}} seconds</p>
+                <div class = "advice-for-questions">
+                    <div class = "bad">
+                        <h3>What to avoid saying for this question</h3>
+                        <p>{{question_array[3].badblurb}}</p>
+                        <p>"{{question_array[3].badexample}}"</p>
+                    </div>
+                    <div class = "good">
+                        <h3>Tips to answer for this question</h3>
+                        <p>{{question_array[3].goodblurb}}</p>
+                        <p>"{{question_array[3].goodexample}}"</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="question5stats" class="hidden">
+                <h2>Question 5</h2>
+                <button>Completed Response</button>
+                <p>Time you took for entire answer: {{minutes_array[4]}} minutes, {{seconds_array[4]}} seconds</p>
+                <div class = "advice-for-questions">
+                    <div class = "bad">
+                        <h3>What to avoid saying for this question</h3>
+                        <p>{{question_array[4].badblurb}}</p>
+                        <p>"{{question_array[4].badexample}}"</p>
+                    </div>
+                    <div class = "good">
+                        <h3>Tips to answer for this question</h3>
+                        <p>{{question_array[4].goodblurb}}</p>
+                        <p>"{{question_array[4].goodexample}}"</p>
+                    </div>
+                </div>
+            </div>
 
         </div>
         <div class="reset-div">
-            <button id="reset-button">Reset</button>
+            <button id="reset-button" class = "reset-button">Practice Again</button>
         </div>
 
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 var buttons = document.querySelectorAll(".question-btn"); // taking all the buttons in the question-btn class
                 var stats = document.querySelectorAll(".results-div > div"); // taking all the divs in the results-div class
+                var instruction = document.getElementById("instructions-p");
 
                 // for each button, add an event listener
                 buttons.forEach((button, index) => {
                     button.addEventListener("click", function() {
+                        if (instruction) {  // Check if the instruction element exists
+                            instruction.style.display = 'none';  // Hide the instruction element
+                        }
+
+
                         stats.forEach((stat, idx) => {
                             if (index === idx) {
                                 stat.classList.toggle("hidden");
