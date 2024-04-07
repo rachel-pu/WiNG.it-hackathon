@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet"href="\static\styles\interview.css">
+    <link rel="stylesheet" href="\static\styles\interview.css">
     <meta charset="UTF-8">
     <title>Interview</title>
 </head>
 <body>
 
-<div class = "entire-interview-div">
-<!--  where all the main stuff, cat animation, everything goes  -->
-    <div class = "interview-main-div">
-          <script src = "/static/javascript/catTalkingAnimation.js"> </script>
-          <img class = "hi" src = "/static/images/Untitled_Artwork.gif" id="cat">
-            <img class = "hi" src="/static/images/freeze-image.png" id="freeze-image">
+<div class="entire-interview-div">
+    <!--  where all the main stuff, cat animation, everything goes  -->
+    <div class="interview-main-div">
+        <script src="/static/javascript/catTalkingAnimation.js"></script>
+        <img class="hi" src="/static/images/Untitled_Artwork.gif" id="cat">
+        <img class="hi" src="/static/images/freeze-image.png" id="freeze-image">
         {{question4}}
     </div>
-<!--  microphone  -->
-    <div class = "microphone-div">
-        <div class = "microphone-button-next-arrow-div">
-            <button id="microphone-button"><img class = "microphone-image" src = "/static/images/microphone.png"></button>
-            <a href = "/interview5"><button>go to page 5</button></a>
+    <!--  microphone  -->
+    <div class="microphone-div">
+        <div class="microphone-button-next-arrow-div">
+            <button id="microphone-button"><img class="microphone-image" src="/static/images/microphone.png"></button>
+            <a href="/interview5">
+                <button id="next-page-button">go to page 5</button>
+            </a>
         </div>
 
-<!--    JAVASCRIPT FOR MICROPHONE    -->
-        <script src = "/static/javascript/speechRecognition.js"></script>
-        <script src ="static/javascript/catSpeaking.js"></script>
+        <!--    JAVASCRIPT FOR MICROPHONE    -->
+        <script src="/static/javascript/speechRecognition.js"></script>
+        <script src="static/javascript/catSpeaking.js"></script>
         <script>
             var question4 = "{{question4}}";
             speakQuestion(question4);

@@ -46,7 +46,7 @@ body{
     justify-content: space-between; /* Centers content horizontally in the container */
 }
 
-button {
+#microphone-button {
     display: inline-block;
     padding: 15px 25px;
     font-size: 20%;
@@ -54,24 +54,89 @@ button {
     text-align: center;
     text-decoration: none;
     outline: none;
-    color: #fff;
-    background-color: #04AA6D;
+    color: #1c1c1c;
+    background-color: #cc4b55;
+    border: none;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
+    box-shadow: 0 9px #49181c;
+    margin-left: 0px;
+    margin-top: 0px;
+    font-family: 'satoshi-medium';
 }
 
-.button:hover {background-color: #1f4121
+#microphone-button:hover {
+background-color: #bb4048;
 }
 
-.button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
+#microphone-button:active {
+    background-color: #bb4048;
+    box-shadow: 0 5px #49181CFF;
     transform: translateY(4px);
-    justify-content: center; /* Centers content horizontally in the container */
-    align-items: center; /* Centers content vertically in the container */
+    justify-content: center;
+    align-items: center;
+}
+
+#microphone-button.pressed {
+    background-color: #bb4048;
+    box-shadow: 0 5px #49181CFF;
+    transform: translateY(4px);
+    justify-content: center;
+    align-items: center;
+}
+
+#microphone-button.disabled {
+    background-color: #424242;
+    box-shadow: 0 5px #1e1e1e;
+    transform: translateY(4px);
+    justify-content: center;
+    align-items: center;
+}
+
+#next-page-button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 100%;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #1c1c1c;
+    background-color: #cc4b55;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #49181c;
+    margin-right: 0px;
+    margin-top: 0px;
+    font-family: 'satoshi-medium';
+
+}
+
+#next-page-button:hover {
+background-color: #bb4048;
+}
+
+#next-page-button:active {
+    background-color: #bb4048;
+    box-shadow: 0 5px #49181CFF;
+    transform: translateY(4px);
+    justify-content: center;
+    align-items: center;
+}
+
+#next-page-button.pressed {
+    background-color: #bb4048;
+    box-shadow: 0 5px #49181CFF;
+    transform: translateY(4px);
+    justify-content: center;
+    align-items: center;
 }
 
 .microphone-image{
+    width: 45px;
+    height: 45px;
+}
+
+.stop-image{
     width: 45px;
     height: 45px;
 }
