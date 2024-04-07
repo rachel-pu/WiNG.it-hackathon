@@ -121,7 +121,7 @@ body{
     text-align: center;
     border-radius: 10px;
     height: 80%;
-    background-color: #d67dfc;
+    background-color: #d2dacb;
 }
 
 .reset-div{
@@ -132,17 +132,14 @@ body{
     text-align: center;
     border-radius: 10px;
     height: 10%;
-    background-color: #dff893;
 }
 
 #question1stats{
     height:100%;
     width:auto;
     color:white;
-    background-color:blue;
+    background-color:#023047;
     padding:10px;
-
-    /*margin-top: 0%;*/
     border-radius: 10px;
     font-family: 'satoshi-medium';
 }
@@ -165,8 +162,6 @@ body{
     color:white;
     background-color:pink;
     padding:10px;
-
-    /*margin-top: 0%;*/
     border-radius: 10px;
     font-family: 'satoshi-medium';
 }
@@ -177,8 +172,6 @@ body{
     color:white;
     background-color:white;
     padding:10px;
-
-    /*margin-top: 0%;*/
     border-radius: 10px;
     font-family: 'satoshi-medium';
 }
@@ -189,13 +182,58 @@ body{
     color:white;
     background-color:red;
     padding:10px;
-
-    /*margin-top: 0%;*/
     border-radius: 10px;
     font-family: 'satoshi-medium';
 }
 
-
 .hidden{
     display:none;
+}
+
+.advice-for-questions{
+    font-size: 20px;
+    font-family: 'satoshi-medium';
+    margin-top: 20px;
+    background-color: white;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+    height: 70%;
+}
+
+.advice-for-questions .bad{
+    padding-top: -10px;
+    padding: 15px;
+    background-color: #d53b3b;
+    width: 50%;
+    font-size: 16px;
+}
+
+.advice-for-questions .good{
+    padding: 15px;
+    background-color: #5cc75c;
+    width: 50%;
+    font-size: 16px;
+}
+
+.reset-button{
+    border-radius: 10px;
+    padding: 4%;
+    margin: 2%;
+    font-size: 30px;
+    font-family: 'satoshi-medium';
+    border: none;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #000000;
+    background-color: #4fcb21;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #2d5e2c;
+    cursor: pointer;
 }
