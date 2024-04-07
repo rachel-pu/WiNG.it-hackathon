@@ -2,8 +2,7 @@ from flask import Flask, render_template, request, jsonify
 from response import InterviewResponse
 from loading_file import read_file
 import pandas as pd
-import playsound
-from gtts import gTTS
+from collections import Counter
 
 
 app = Flask(__name__)
@@ -12,23 +11,23 @@ finalTime = 0
 
 question_array = []
 transcripts_array = []
-times_array = []
+minutes_array = []
+seconds_array = []
 
 df = pd.read_csv('questions.csv', encoding='latin-1')
-# print(df.columns)
 
-# def play_audio(text):
-#     tts = gTTS(text)
-#     tts.save("audio.mp3")
-#     playsound.playsound("audio.mp3")
-
-
+def get_top_words(answer):           
+    words = answer.split()
+    wordcount = Counter(words)        
+    mostrepeatedwords = wordcount.most_common(3)        
+    return mostrepeatedwords
 
 def clear_array():
     if len(question_array) > 0:
         question_array.clear()
         transcripts_array.clear()
-        times_array.clear()
+        minutes_array.clear()
+        seconds_array.clear()
 
 
 def set_array():
@@ -54,11 +53,15 @@ def receive_text():
     print("Received transcription:", finalTranscription)
     print("Speech duration:", finalTime, "seconds")
     transcripts_array.append(finalTranscription)
-    times_array.append(finalTime)
+    temp_array = []
+    temp_array.append(finalTime)
+    for time in temp_array:
+        minutes = int(time) // 60
+        seconds = int(time) % 60
+        minutes_array.append(minutes)
+        seconds_array.append(seconds)
 
     return jsonify({"status": "success", "message": "Data received"})
-
-
 
 
 @app.route("/")
@@ -72,9 +75,6 @@ def instructions():
     set_array()
     return render_template("instructions.html")
 
-# @app.route('speak', methods=['POST'])
-# def speak():
-#
 
 
 @app.route("/interview1")
@@ -124,8 +124,8 @@ def interview5():
 
 @app.route("/results")
 def results():
+    return render_template("results.html", question_array=question_array, transcripts_array=transcripts_array, minutes_array=minutes_array, seconds_array=seconds_array)
 
-    return render_template("results.html", question_array=question_array, transcripts_array=transcripts_array, times_array=times_array)
 
 
 if __name__ == '__main__':
