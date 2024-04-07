@@ -1,3 +1,8 @@
+@font-face{
+    font-family: 'satoshi-medium';
+    src: url('../fonts/Satoshi_Complete/Fonts/OTF/Satoshi-Medium.otf');
+}
+
 body{
     background-color: #e7cbb3;
 }
@@ -6,7 +11,10 @@ body{
     background-color: white;
     margin: 20px;
     height: 95vh;
+    border-radius: 25px;
     /*position: relative;*/
+        font-family: 'satoshi-medium';
+
 }
 
 .interview-main-div{
@@ -25,6 +33,10 @@ body{
     height: 16%;
     justify-content: right; /* Centers content horizontally in the container */
     align-items: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+        font-family: 'satoshi-medium';
+
 }
 
 .microphone-button-next-arrow-div{
@@ -84,4 +96,9 @@ button {
 
 #freeze-image {
     display: none; /* Initially hide the freeze image */
+}
+
+#cat, #freeze-image {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 }
