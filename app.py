@@ -2,8 +2,6 @@ from flask import Flask, render_template, request, jsonify
 from response import InterviewResponse
 from loading_file import read_file
 import pandas as pd
-import playsound
-from gtts import gTTS
 
 
 app = Flask(__name__)
@@ -12,23 +10,15 @@ finalTime = 0
 
 question_array = []
 transcripts_array = []
-times_array = []
+times_dict = {}
 
 df = pd.read_csv('questions.csv', encoding='latin-1')
-# print(df.columns)
-
-# def play_audio(text):
-#     tts = gTTS(text)
-#     tts.save("audio.mp3")
-#     playsound.playsound("audio.mp3")
-
-
 
 def clear_array():
     if len(question_array) > 0:
         question_array.clear()
         transcripts_array.clear()
-        times_array.clear()
+        times_dict.clear()
 
 
 def set_array():
@@ -54,7 +44,14 @@ def receive_text():
     print("Received transcription:", finalTranscription)
     print("Speech duration:", finalTime, "seconds")
     transcripts_array.append(finalTranscription)
-    times_array.append(finalTime)
+    temp_array = []
+    temp_array.append(finalTime)
+    for i, time in enumerate(temp_array):
+        minutes = int(time) // 60
+        seconds = int(time) % 60
+        times_dict[i] = (minutes, seconds)
+    print("Minutes:", times_dict[i][0])
+    print("Seconds:", times_dict[i][1])
 
     return jsonify({"status": "success", "message": "Data received"})
 
@@ -72,9 +69,6 @@ def instructions():
     set_array()
     return render_template("instructions.html")
 
-# @app.route('speak', methods=['POST'])
-# def speak():
-#
 
 
 @app.route("/interview1")
@@ -125,7 +119,7 @@ def interview5():
 @app.route("/results")
 def results():
 
-    return render_template("results.html", question_array=question_array, transcripts_array=transcripts_array, times_array=times_array)
+    return render_template("results.html", question_array=question_array, transcripts_array=transcripts_array, times_dict = times_dict)
 
 
 if __name__ == '__main__':
