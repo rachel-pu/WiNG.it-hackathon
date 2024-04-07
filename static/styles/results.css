@@ -21,14 +21,14 @@ body{
 }
 
 .container {
-    margin-top: 20px;
+    /*background-color: red;*/
     display: flex;
-    height: 83vh;
+    height: 120vh;
     margin-right: 20px;
     margin-left: 20px;
 }
 
-.questions-div {
+.questions-reset-div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,7 +37,7 @@ body{
     /*background-color: #d27878;*/
     width: 33%;
     height: 100%;
-    margin: auto;
+    margin-top: -130px;
     border-radius: 10px;
     padding-right: 50px;
     padding-left: 50px;
@@ -45,8 +45,7 @@ body{
     font-family: 'satoshi-medium';
 }
 
-.questions-div h1{
-    margin-top: 30px;
+.questions-reset-div h1{
     font-size: 30px;
     font-family: 'eas-vhs';
     text-align: left;
@@ -103,7 +102,7 @@ body{
     text-align: center;
     /*background-color: #d27878;*/
     width: 60%;
-    height: 100vh;
+    height: auto;
     margin: auto;
     margin-right: 20px;
     /*margin-top: 0%;*/
@@ -113,14 +112,15 @@ body{
 }
 
 .results-div{
+    margin-top: -80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     text-align: center;
     border-radius: 10px;
-    height: 80%;
-    background-color: #d2dacb;
+    height: auto;
+    background-color: #c4c7b4;
 }
 
 .reset-div{
@@ -196,7 +196,8 @@ body{
     margin: 20px;
     display: flex;
     flex-direction: row;
-    height: 50%;
+
+    position: relative;
 }
 
 .advice-for-questions .bad{
@@ -207,6 +208,7 @@ body{
     font-size: 16px;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
+    flex: 3;
 }
 
 .advice-for-questions .good{
@@ -216,7 +218,7 @@ body{
     font-size: 16px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-
+    flex: 3;
 }
 
 .reset-button{
@@ -233,9 +235,27 @@ body{
     text-decoration: none;
     outline: none;
     color: #000000;
-    background-color: #4fcb21;
+    background-color: #5cc75c;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #2d5e2c;
     cursor: pointer;
+}
+
+.reset-button:hover
+{background-color: #54ad53
+}
+
+.reset-button:active {
+    background-color: #54ad53;
+    box-shadow: 0 5px #225725;
+    transform: translateY(4px);
+    justify-content: center; /* Centers content horizontally in the container */
+    align-items: center; /* Centers content vertically in the container */
+}
+
+.completed-response-div{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
 }
