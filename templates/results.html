@@ -33,7 +33,7 @@
                 <h2>Question 1</h2>
                 <h3>Completed Response</h3>
                 <div class = "completed-response-div">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>{{transcripts_array[0]}}</p>
                 </div>
                     <h3>Time taken for this response:</h3>
                 <p>{{minutes_array[0]}} minutes, {{seconds_array[0]}} seconds</p>
@@ -54,10 +54,10 @@
 <!-- QUESTION 2-->
             <div id="question2stats" class="hidden">
                 <h2>Question 2</h2>
-                <p>Completed Response</p>
+                <h3>Completed Response</h3>
                 <p>{{transcripts_array[1]}}</p>
-                <p>Time you took for entire answer:<br/>
-                    {{minutes_array[0]}} minutes, {{seconds_array[0]}} seconds</p>
+                <h3>Time taken for this response:</h3>
+                    <p>{{minutes_array[1]}} minutes, {{seconds_array[1]}} seconds</p>
                 <div class = "advice-for-questions">
                     <div class = "bad">
                         <h3>What to avoid saying for this question</h3>
@@ -75,10 +75,10 @@
             <!-- QUESTION 3-->
             <div id="question3stats" class="hidden">
                 <h2>Question 3</h2>
-                <p>Completed Response</p>
+                <h3>Completed Response</h3>
                 <p>{{transcripts_array[2]}}</p>
-                <p>Time you took for entire answer:<br/>
-                    {{minutes_array[0]}} minutes, {{seconds_array[0]}} seconds</p>                <div class = "advice-for-questions">
+                <h3>Time taken for this response:</h3>
+                <p>{{minutes_array[2]}} minutes, {{seconds_array[2]}} seconds</p>                <div class = "advice-for-questions">
                     <div class = "bad">
                         <h3>What to avoid saying for this question</h3>
                         <p>{{question_array[2].badblurb}}</p>
@@ -95,10 +95,11 @@
             <!-- QUESTION 4-->
             <div id="question4stats" class="hidden">
                 <h2>Question 4</h2>
-                <p>Completed Response</p>
+                <h3>Completed Response</h3>
                 <p>{{transcripts_array[3]}}</p>
-                <p>Time you took for entire answer:<br/>
-                    {{minutes_array[0]}} minutes, {{seconds_array[0]}} seconds</p>                <div class = "advice-for-questions">
+                <h3>Time taken for this response:</h3>
+                     <p>{{minutes_array[3]}} minutes, {{seconds_array[3]}} seconds</p>
+                <div class = "advice-for-questions">
                     <div class = "bad">
                         <h3>What to avoid saying for this question</h3>
                         <p>{{question_array[3].badblurb}}</p>
@@ -115,10 +116,11 @@
             <!-- QUESTION 5-->
             <div id="question5stats" class="hidden">
                 <h2>Question 5</h2>
-                <p>Completed Response</p>
+                <h3>Completed Response</h3>
                 <p>{{transcripts_array[4]}}</p>
-                <p>Time you took for entire answer:<br/>
-                    {{minutes_array[0]}} minutes, {{seconds_array[0]}} seconds</p>                <div class = "advice-for-questions">
+                <h3>Time taken for this response:</h3>
+                <p>{{minutes_array[4]}} minutes, {{seconds_array[4]}} seconds</p>
+                <div class = "advice-for-questions">
                     <div class = "bad">
                         <h3>What to avoid saying for this question</h3>
                         <p>{{question_array[4].badblurb}}</p>
