@@ -58,37 +58,58 @@ body{
 
 .instructionsText {
     text-align: left;
-    padding-left: 2%;  
-    margin-bottom: 35px;
-
+    padding-left: 2%;
 }
 
 .instructionsHeading{
     font-size: 70px;
+    margin-top: -20px;
     letter-spacing: 3px;
     font-family: eas-vhs;
-    margin: 0;
-    margin-bottom: 20px;
     text-align: center;
 }
 
 
-.instructionBullets{
-    margin-top: 60px;
+.instructionBullets{;
+    font-size: 25px;
+    font-family: satoshi-medium;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+
+.okayButton {
+    border-radius: 10px;
+    border-color: #a8dadc;
+    padding: 4%;
+    margin: 2%;
     font-size: 30px;
-    font-family: satoshi-medium;
-
+    font-family: 'satoshi-medium';
+    border: none;
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #000000;
+    background-color: #a8dadc;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #1d3557;
+    cursor: pointer;
+    width: 100%;
 }
 
-.okayButton{
-    border: none;
-    border-radius: 20px;
-    font-family: satoshi-medium;
-    font-size: 40px;
-    text-align: center;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top:60px;
+.okayButton:hover {background-color: #1f4121
+}
 
+.okayButton:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    justify-content: center; /* Centers content horizontally in the container */
+    align-items: center; /* Centers content vertically in the container */
 }
