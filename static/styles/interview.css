@@ -29,7 +29,7 @@ body{
 
 .microphone-div{
     display: flex;
-    background-color: grey;
+    background-color: #b0957e;
     height: 16%;
     justify-content: right; /* Centers content horizontally in the container */
     align-items: center;
@@ -40,7 +40,7 @@ body{
 }
 
 .microphone-button-next-arrow-div{
-    width: 55%;
+    width: 53.5%;
     display: flex;
     flex-direction: row;
     justify-content: space-between; /* Centers content horizontally in the container */
@@ -94,8 +94,8 @@ background-color: #bb4048;
 
 #next-page-button {
     display: inline-block;
-    padding: 15px 25px;
-    font-size: 100%;
+    padding: 15px 40px;
+    font-size: 30px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -105,9 +105,9 @@ background-color: #bb4048;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #49181c;
-    margin-right: 0px;
     margin-top: 0px;
     font-family: 'satoshi-medium';
+    margin-right: 30px;
 
 }
 
@@ -165,4 +165,8 @@ background-color: #bb4048;
 #cat, #freeze-image {
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
+}
+
+#next-page-button{
+    display: none;
 }

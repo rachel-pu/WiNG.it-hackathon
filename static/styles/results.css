@@ -23,7 +23,6 @@ body{
 .container {
     margin-top: 20px;
     display: flex;
-    column-gap: 2%;
     height: 83vh;
     margin-right: 20px;
     margin-left: 20px;
@@ -36,7 +35,7 @@ body{
     align-content: center;
     text-align: center;
     /*background-color: #d27878;*/
-    width: 50%;
+    width: 33%;
     height: 100%;
     margin: auto;
     border-radius: 10px;
@@ -48,7 +47,7 @@ body{
 
 .questions-div h1{
     margin-top: 30px;
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'eas-vhs';
     text-align: left;
     margin: 10px;
@@ -65,7 +64,6 @@ body{
     border: none;
     display: inline-block;
     padding: 15px 25px;
-    font-size: 24px;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
@@ -104,9 +102,10 @@ body{
     justify-content: space-evenly;
     text-align: center;
     /*background-color: #d27878;*/
-    width: 50%;
-    height: 100%;
+    width: 60%;
+    height: 100vh;
     margin: auto;
+    margin-right: 20px;
     /*margin-top: 0%;*/
     border-radius: 10px;
     float: right;
@@ -148,7 +147,7 @@ body{
     height:100%;
     width:auto;
     color:white;
-    background-color:yellow;
+    background-color:#023047;
     padding:10px;
 
     /*margin-top: 0%;*/
@@ -160,7 +159,7 @@ body{
     height:100%;
     width:auto;
     color:white;
-    background-color:pink;
+    background-color:#023047;
     padding:10px;
     border-radius: 10px;
     font-family: 'satoshi-medium';
@@ -170,7 +169,7 @@ body{
     height:100%;
     width:auto;
     color:white;
-    background-color:white;
+    background-color:#023047;
     padding:10px;
     border-radius: 10px;
     font-family: 'satoshi-medium';
@@ -180,7 +179,7 @@ body{
     height:100%;
     width:auto;
     color:white;
-    background-color:red;
+    background-color:#023047;
     padding:10px;
     border-radius: 10px;
     font-family: 'satoshi-medium';
@@ -194,12 +193,10 @@ body{
     font-size: 20px;
     font-family: 'satoshi-medium';
     margin-top: 20px;
-    background-color: white;
     margin: 20px;
     display: flex;
     flex-direction: row;
-    border-radius: 20px;
-    height: 70%;
+    height: 50%;
 }
 
 .advice-for-questions .bad{
@@ -208,6 +205,8 @@ body{
     background-color: #d53b3b;
     width: 50%;
     font-size: 16px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .advice-for-questions .good{
@@ -215,6 +214,9 @@ body{
     background-color: #5cc75c;
     width: 50%;
     font-size: 16px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
 }
 
 .reset-button{

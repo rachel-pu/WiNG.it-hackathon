@@ -24,10 +24,13 @@
     <div class="stats-div">
         <div class="results-div">
             <p id = "instructions-p">To begin, please press one of your questions on the left!</p>
+            <!--    QUESTION 1-->
             <div id="question1stats" class="hidden">
                 <h2>Question 1</h2>
-                <button>Completed Response</button>
-                <p>Time you took for entire answer: {{minutes_array[0]}} minutes, {{seconds_array[0]}} seconds</p>
+                <p>Completed Response</p>
+                <p>{{transcripts_array[0]}}</p>
+                <p>Time you took for entire answer:<br/>
+                    {{minutes_array[0]}} minutes, {{seconds_array[0]}} seconds</p>
                 <div class = "advice-for-questions">
                     <div class = "bad">
                         <h3>What to avoid saying for this question</h3>
@@ -42,9 +45,11 @@
                 </div>
             </div>
 
+<!-- QUESTION 2-->
             <div id="question2stats" class="hidden">
                 <h2>Question 2</h2>
-                <button>Completed Response</button>
+                <p>Completed Response</p>
+                <p>{{transcripts_array[1]}}</p>
                 <p>Time you took for entire answer: {{minutes_array[1]}} minutes, {{seconds_array[1]}} seconds</p>
                 <div class = "advice-for-questions">
                     <div class = "bad">
@@ -60,9 +65,11 @@
                 </div>
             </div>
 
+            <!-- QUESTION 3-->
             <div id="question3stats" class="hidden">
                 <h2>Question 3</h2>
-                <button>Completed Response</button>
+                <p>Completed Response</p>
+                <p>{{transcripts_array[2]}}</p>
                 <p>Time you took for entire answer: {{minutes_array[2]}} minutes, {{seconds_array[2]}} seconds</p>
                 <div class = "advice-for-questions">
                     <div class = "bad">
@@ -78,9 +85,11 @@
                 </div>
             </div>
 
+            <!-- QUESTION 4-->
             <div id="question4stats" class="hidden">
                 <h2>Question 4</h2>
-                <button>Completed Response</button>
+                <p>Completed Response</p>
+                <p>{{transcripts_array[3]}}</p>
                 <p>Time you took for entire answer: {{minutes_array[3]}} minutes, {{seconds_array[3]}} seconds</p>
                 <div class = "advice-for-questions">
                     <div class = "bad">
@@ -96,9 +105,11 @@
                 </div>
             </div>
 
+            <!-- QUESTION 5-->
             <div id="question5stats" class="hidden">
                 <h2>Question 5</h2>
-                <button>Completed Response</button>
+                <p>Completed Response</p>
+                <p>{{transcripts_array[4]}}</p>
                 <p>Time you took for entire answer: {{minutes_array[4]}} minutes, {{seconds_array[4]}} seconds</p>
                 <div class = "advice-for-questions">
                     <div class = "bad">
@@ -115,6 +126,7 @@
             </div>
 
         </div>
+<!--        RESET DIV -->
         <div class="reset-div">
             <button id="reset-button" class = "reset-button">Practice Again</button>
         </div>

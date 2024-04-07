@@ -36,7 +36,8 @@ speech.onend = function() {
             body: formData  // Sending as FormData object
         })
             .then(data => console.log(data))
-            .catch(error => console.error('Error:', error));
+            document.getElementById('next-page-button').style.display = 'inline-block'; // or 'inline-block'
+
     }
 };
 
@@ -45,6 +46,7 @@ button.onclick = () => {
     if (pressCount > 2) {
         button.disabled = true; // Disable the button after two presses
         button.style.backgroundColor = '#424242'; // Change the button color to grey
+        button.style.boxShadow = 'none'; // Remove the shadow
         return; // Stop further execution
     }
 
