@@ -1,4 +1,3 @@
-from collections import Counter
 import pandas as pd
 
 class InterviewResponse:
@@ -7,7 +6,6 @@ class InterviewResponse:
     
     def __init__(self, question, badexample=None, badblurb=None, goodexample=None, goodblurb=None):
         self.question = question                    # question 
-        self.mostrepeatedwords = None             # for each question?
         self.tone = None
         self.badexample = badexample
         self.badblurb = badblurb
@@ -17,11 +15,6 @@ class InterviewResponse:
     def get_question(self):             # print question
         return self.question
     
-    def get_top_words(self):           # print top words
-        words = self.response.split()
-        word_count = Counter(words)
-        self.mostrepeatedwords = word_count.most_common(3)        # for each question
-        return self.mostrepeatedwords
 
     def set_response(self, text):       # set response
         self.response = text
