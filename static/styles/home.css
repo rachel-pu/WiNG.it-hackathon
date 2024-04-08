@@ -102,6 +102,7 @@ body{
     border-radius: 15px;
     box-shadow: 0 9px #49181c;
     cursor: pointer;
+    margin-bottom: -30px;
 }
 
 .get-started-button:hover
@@ -124,21 +125,37 @@ body{
 }
 
 .project-creators{
+    justify-content: center;
+    align-items: center; /* Centers content vertically */
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-family: 'Outfit-Regular';
     color: #cc4b55;
-    margin-bottom: -30px;
+    font-size: 20px;
 }
 
 .project-creators span{
-    color: #63A0D0FF;
+    color: #376096;
 }
 
 .project-creators a{
-    color: #63a0d0;
+    color: #376096;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .project-creators a:hover{
-    color: #43759d;
+    color: #204760;
+}
+
+.browser-blurb{
+    text-align: center;
+    font-size: 18px !important;
+    color: #415573;
+    margin-bottom: -20px;
+    margin-top: -15px !important;
 }
 

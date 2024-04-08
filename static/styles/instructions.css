@@ -119,11 +119,6 @@ body{
     align-items: center; /* Centers content vertically in the container */
 }
 
-.browser-blurb{
-    text-align: center;
-    font-size: 20px;
-    color: #415573;
-}
 
 .refresh-message{
     text-align: center;
