@@ -102,8 +102,6 @@ body{
     border-radius: 15px;
     box-shadow: 0 9px #49181c;
     cursor: pointer;
-    margin-left: 0px;
-    margin-top: 0px;
 }
 
 .get-started-button:hover
@@ -126,7 +124,21 @@ body{
 }
 
 .project-creators{
-    margin-top: -50px;
     color: #cc4b55;
+    margin-bottom: -30px;
+}
+
+.project-creators span{
+    color: #63A0D0FF;
+}
+
+.project-creators a{
+    color: #63a0d0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.project-creators a:hover{
+    color: #43759d;
 }
 
