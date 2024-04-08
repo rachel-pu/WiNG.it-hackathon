@@ -36,6 +36,7 @@ body{
     font-family: 'Outfit-Medium';
 }
 
+
 .instructionsMainDiv {
     display: flex;
     flex-direction: column;
@@ -117,5 +118,12 @@ body{
 
 .browser-blurb{
     text-align: center;
+    font-size: 20px;
+}
+
+.refresh-message{
+    text-align: center;
+    color: #000000;
+    font-weight: bolder;
     font-size: 20px;
 }
