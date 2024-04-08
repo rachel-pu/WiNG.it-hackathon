@@ -21,7 +21,7 @@ body{
     height: 80vh;
 }
 
-.hi{
+.cat-div{
     width: 100%; /* Make the image take up 100% of the div's width */
     height: 100%; /* Make the image take up 100% of the div's height */
     object-fit: cover;

@@ -16,11 +16,11 @@ speech.onresult = function(event) {
     for (let i = event.resultIndex; i < event.results.length; ++i) {
         if (event.results[i].isFinal) {
             finalTranscript += event.results[i][0].transcript + ' ';
-        } else {
-            interimTranscript += event.results[i][0].transcript;
-        }
     }
-    // transcription.textContent = finalTranscript; // Update the page with the transcription
+        else{
+            finalTranscript += event;
+        }}
+    // transcription.textContent = finalTranscript; // can be used for debugging, updates the page with the transcription
 };
 
 speech.onend = function() {
@@ -28,7 +28,7 @@ speech.onend = function() {
         // Prepare form data
         let formData = new FormData();
         formData.append('text', finalTranscript);
-        formData.append('time', speechTime.toString()); // Convert time to string if necessary
+        formData.append('time', speechTime.toString());
 
         // Send the complete transcription and the speech time when the speech recognition stops
         fetch('/send_text', {
@@ -36,7 +36,7 @@ speech.onend = function() {
             body: formData  // Sending as FormData object
         })
             .then(data => console.log(data))
-            document.getElementById('next-page-button').style.display = 'inline-block'; // or 'inline-block'
+            document.getElementById('next-page-button').style.display = 'inline-block'; // Display the next page button
 
     }
 };
@@ -46,7 +46,7 @@ button.onclick = () => {
     if (pressCount > 2) {
         button.disabled = true; // Disable the button after two presses
         button.style.backgroundColor = '#424242'; // Change the button color to grey
-        button.style.boxShadow = 'none'; // Remove the shadow
+        button.style.boxShadow = '0px 8px #212121'; // Remove the shadow by setting offsets and blur to 0
         return; // Stop further execution
     }
 
