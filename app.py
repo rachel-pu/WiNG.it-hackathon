@@ -54,8 +54,6 @@ def receive_text():
         seconds = int(time) % 60
         minutes_array.append(minutes)
         seconds_array.append(seconds)
-    get_top_words(finalTranscription)
-
 
     return jsonify({"status": "success", "message": "Data received"})
 
