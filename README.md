@@ -29,7 +29,7 @@ There are two ways to experience WiNG.it:
 
 ### Option 1: Visit Our Website
 
-You can start using WiNG.it right away by visiting our website:
+You can start using WiNG.it right away by visiting our website (please use Google Chrome!):
 
 [WiNG.it](https://wing-it.onrender.com/)
 
@@ -41,7 +41,7 @@ Alternatively, you can run WiNG.it locally by following these steps:
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/rachel-pu-ufl/wing-it.git
+   git clone https://github.com/rachel-pu/wing-it.git
 
 2. Navigate to the project directory:
    ```bash
