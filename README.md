@@ -2,7 +2,7 @@
 
 Welcome to WiNG.it, a project brought to life by a group of first-time hackers at the University of Florida's inaugural WiNGHacks event. This hackathon is designed to empower Women, Nonbinary, and Gender minorities by providing them with a platform to innovate and create.
 
-![Cornelius the Cat](/WiNG.it/static/images/cat_speaking.gif)
+![Cornelius the Cat](WiNG.it/static/images/cat_speaking.gif)
 
 ## 🏆 Achievement
 
