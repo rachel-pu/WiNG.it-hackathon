@@ -6,30 +6,28 @@ Welcome to WiNG.it, a project brought to life by a group of first-time hackers a
 
 We are thrilled to announce that WiNG.it won the **First Flight Award** at WiNGHacks! This award recognizes the best project created by first-time hackers.
 
-## About WiNGHacks
-
-WiNGHacks is the first annual hackathon event at UF that focuses on uplifting Women, Nonbinary, and Gender minorities. It aims to provide a supportive environment where these groups can thrive and showcase their technological skills.
-
 ## Project Overview
 
-WiNG.it simulates realistic behavioral interviews through a unique interactive experience. Our mascot, Cornelius the Cat, reads out 5 carefully selected interview questions. Participants respond verbally to these questions.
+WiNG.it simulates realistic behavioral interviews through a unique interactive experience. Our mascot, Cornelius the Cat, reads out 5 carefully selected interview questions. Users respond verbally to these questions.
 
 ### Features
 
 - **Interactive Q&A:** Engage in a mock interview where Cornelius the Cat asks you interview questions.
 - **Verbal Responses:** Users provide their answers verbally, mimicking a real interview setting.
 - **Transcripts:** Receive a full transcript of your responses.
-- **Response Analysis:** Get detailed feedback on the length of your responses.
-- **Professional Advice:** Obtain professional advice to improve your interviewing skills.
+- **Response Time:** Get feedback on the time took for each of your responses.
+- **Guided Responses:** Learn to answer interview questions effectively with practical examples.
 - **Common Pitfalls:** Learn about common pitfalls to avoid during interviews.
 
 ## Getting Started
+
+ ⚠️ Please make sure to use **Google Chrome** while using our project! ⚠️
 
 There are two ways to experience WiNG.it:
 
 ### Option 1: Visit Our Website
 
-You can start using WiNG.it right away by visiting our website (please use Google Chrome!):
+You can start using WiNG.it right away by visiting our website:
 
 [WiNG.it](https://wing-it.onrender.com/)
 
