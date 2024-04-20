@@ -45,11 +45,15 @@ Alternatively, you can run WiNG.it locally by following these steps:
 
 2. Navigate to the project directory:
    ```bash
-   cd wing-it
+   cd WiNG.it
 
-3. Run the Flask application:
+3. Install the required Python packages:
    ```bash
-    flask run
+   pip install -r requirements.txt
+   
+5. Run the Flask application:
+   ```bash
+   flask run
 
 ## Acknowledgments
 
