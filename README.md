@@ -41,7 +41,7 @@ Alternatively, you can run WiNG.it locally by following these steps:
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/rachel-pu/wing-it.git
+   git clone https://github.com/rachel-pu/WiNG.it.git
 
 2. Navigate to the project directory:
    ```bash
