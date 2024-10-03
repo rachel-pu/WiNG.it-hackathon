@@ -23,21 +23,7 @@ WiNG.it simulates realistic behavioral interviews through a unique interactive e
 
 ## Getting Started
 
- ⚠️ Please make sure to use **Google Chrome** while using our project! ⚠️
-
-There are two ways to experience WiNG.it:
-
-### Option 1: Visit Our Website
-
-You can start using WiNG.it right away by visiting our website:
-
-[WiNG.it](https://wing-it.onrender.com/)
-
-Please note that the website may be slow to load initially, taking around 40 seconds to 1 minute.
-
-### Option 2: Run Locally Using Flask
-
-Alternatively, you can run WiNG.it locally by following these steps:
+You can run WiNG.it locally by following these steps:
 
 1. Clone the repo:
    ```bash
